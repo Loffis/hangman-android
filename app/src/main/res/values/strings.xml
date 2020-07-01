@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Hangman</string>
+    <string name="hangman">HANGMAN</string>
+    <string name="enter_password">Password</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="add_user">Add user</string>
+    <string name="image_0">Image 0</string>
+    <string name="secretWordText">_ _ _ _ _ _</string>
+    <string name="guess">Guess</string>
+    <string name="character_to_guess">Character to guess</string>
+    <string name="_">_</string>
+    <string name="image_7">Image 7</string>
+    <string name="quit">Quit</string>
+    <string name="retry">Retry</string>
+    <string name="highscores">Highscores</string>
+    <string name="give_up">Give up</string>
+    <string name="score_0">Score: 0</string>
+    <string name="play">Play again</string>
+    <string name="back">Back</string>
+    <string name="loginAPI">LOGIN</string>
+    <string name="delete">DELETE</string>
+    <string name="put">PUT</string>
+    <string name="post">POST</string>
+    <string name="get">GET</string>
+    <string name="apitextview">apiTextView</string>
+    <string name="api">API</string>
+    <string name="picture_of_user">Picture of user</string>
+    <string name="winner">WINNER</string>
+    <string name="home">HOME</string>
+</resources>
