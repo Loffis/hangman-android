@@ -71,11 +71,8 @@ public class GameActivity extends AppCompatActivity {
         showWordAndScore();
         game();
     }
+    
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
 
     /**
      *  **** "@param" gives error, therefore "@" is left out. ****
