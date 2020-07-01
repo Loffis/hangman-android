@@ -53,7 +53,13 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_USERNAME, player.getUsername());
         cv.put(COLUMN_SCORE, score);
 
-        return ((db.insert(SCORE_TABLE, null, cv)) != -1);
+        if (db.insert(SCORE_TABLE, null, cv) != -1) {
+            db.close();
+            return true;
+        } else {
+            db.close();
+            return false;
+        }
     }
 
     // add player to database
@@ -71,7 +77,13 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_USERNAME, player.getUsername());
         cv.put(COLUMN_PASSWORD, player.getPassword());
 
-        return ((db.insert(PLAYER_TABLE, null, cv)) != -1);
+        if (db.insert(PLAYER_TABLE, null, cv) != -1) {
+            db.close();
+            return true;
+        } else {
+            db.close();
+            return false;
+        }
     }
 
     // find player by searching for user name
@@ -81,9 +93,17 @@ public class DBHelper extends SQLiteOpenHelper {
 
         Cursor cursor = db.rawQuery("SELECT * FROM " + PLAYER_TABLE + " WHERE " + COLUMN_USERNAME + " = " + "'" + username + "'", null);
         if (cursor.moveToFirst()){
+            int id = cursor.getInt(0);
+            username = cursor.getString(1);
+            String password = cursor.getString(2);
+
+            player = new Player(id, username, password);
+            /*
             player = new Player(cursor.getInt(cursor.getColumnIndex(COLUMN_ID)),
                     cursor.getString(cursor.getColumnIndex(COLUMN_USERNAME)),
                     cursor.getString(cursor.getColumnIndex(COLUMN_PASSWORD)));
+
+             */
         }
         cursor.close();
         db.close();

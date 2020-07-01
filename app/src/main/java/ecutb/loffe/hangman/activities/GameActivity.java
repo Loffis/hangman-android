@@ -71,7 +71,7 @@ public class GameActivity extends AppCompatActivity {
         showWordAndScore();
         game();
     }
-    
+
 
 
     /**
