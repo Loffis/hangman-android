@@ -176,6 +176,7 @@ public class GameActivity extends AppCompatActivity {
             return true;
         }
         Toast.makeText(GameActivity.this, letter + " IS WRONG!", Toast.LENGTH_SHORT).show();
+
         score--;
         wrongGuesses++;
         usedLetters.append(letter);

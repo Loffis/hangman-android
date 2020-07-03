@@ -99,7 +99,6 @@ public class HighscoreActivity extends AppCompatActivity implements View.OnClick
     public List<Score> getAllScores() {
         dbHelper = new DBHelper(this);
         scores = dbHelper.getHighscores();
-        String scoreSize = String.valueOf(scores.size());
         return scores;
     }
 }

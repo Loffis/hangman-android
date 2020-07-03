@@ -36,11 +36,10 @@ public class LoginActivity extends AppCompatActivity {
         addBtn = findViewById(R.id.btnAddUser);
         apiBtn = findViewById(R.id.btnAPI);
         dbHelper = new DBHelper(this);
-
     }
 
     // When clicking Login, validate credentials
-    // If ok, save shard preferences and start GameActivity
+    // If ok, save shared preferences and start GameActivity
     // Else, show dialog
     public void clickLogin(View view) {
         if (dbHelper.validate(name.getText().toString().toUpperCase(), password.getText().toString())) {
@@ -95,8 +94,8 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    // API button, doesn't need login for entering API Activity
+    // API button, you don't need login for entering API Activity
     public void clickAPI(View view) {
-        startActivityForResult(new Intent(LoginActivity.this, APIActivity.class), 1);
+        startActivity(new Intent(LoginActivity.this, APIActivity.class));
     }
 }
